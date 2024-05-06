@@ -1,0 +1,11 @@
+<h5 class="text-center ">5 day Forecast:</h5>
+<div class='flex flex-col gap-2 p-6 justify-center' *ngFor="let day of days">
+  <div class='flex justify-between items-center gap-2'>
+    <div class='max-w-[26%] md:max-w-[22%]'>
+      <img [src]="getWeatherImage(day)" alt='weather image' />
+    </div>
+
+    <span class="ml-3">{{day.main.temp_max}}'C</span>
+    <span>{{day.dt_txt.slice(0, 10)}}</span>
+  </div>
+</div>

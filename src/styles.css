@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html {
+      font-family: "Proxima Nova", system-ui, sans-serif;
+  }
+  h1 {
+      font-size: clamp(3rem, 5vw, 3.75rem);
+      font-weight: 900;
+  }
+  h2 {
+      font-size: clamp(2.5rem, 5vw, 3rem);
+      font-weight: 800;
+  }
+  h3{
+      font-size: clamp(2.25rem, 3vw, 2.5rem);
+      font-weight: 600;
+  }
+  h4{
+      font-size: clamp(2rem, 3vw, 2.25rem);
+      font-weight: 500;
+  }
+  h5{
+      font-size: clamp(1.5rem, 2vw, 2rem);
+      font-weight: 500;
+  }
+  h6{
+      font-size: clamp(1rem, 2vw, 1.5rem);
+      font-weight: 500;
+  }
+}

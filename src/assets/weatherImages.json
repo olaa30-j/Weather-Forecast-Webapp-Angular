@@ -1,0 +1,22 @@
+[
+  {
+    "type": "sunny",
+    "icon": "../assets/weathers images/sunny.png"
+  },
+  {
+    "type": "almostsunny",
+    "icon": "../assets/weathers images/almostsunny.png"
+  },
+  {
+    "type": "clouds",
+    "icon": "../assets/weathers images/rainy.png"
+  },
+  {
+    "type": "rain",
+    "icon": "../assets/weathers images/rain.png"
+  },
+  {
+    "type": "clear",
+    "icon":"../assets/weathers images/moon.png"
+  }
+]

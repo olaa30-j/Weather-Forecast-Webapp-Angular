@@ -1,0 +1,64 @@
+<div class="flex flex-col md:flex-row items-center justify-center">
+  <div class='flex flex-col'>
+    <h2 class='md:text-start m-0 p-0'>{{weatherData?.main?.temp}}'C</h2>
+    <p class='text-xl font-medium'><span class='text-base  font-normal'>Feels Like:</span>
+      {{weatherData?.main?.feels_like}}'C</p>
+
+    <div class='flex flex-col gap-4 items-center mt-8'>
+      <div class='sunrise_container flex items-center gap-4'>
+        <span class="material-symbols-outlined text-[2.5rem]">
+          wb_twilight
+          </span>
+        <div class="sunrise flex flex-col">
+          <span>Sunrise</span>
+          <span>{{sunriseTimeString}}</span>
+        </div>
+      </div>
+      <div class='sunset_container flex items-center gap-4'>
+        <span class="material-symbols-outlined text-[2.5rem]">
+          wb_twilight
+          </span>
+        <div class="sunset flex flex-col">
+          <span>Sunset</span>
+          <span>{{sunsetTimeString}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class='md:w-[35%] flex md:flex-col flex-row-reverse justify-center items-center'>
+    <div class='max-w-[70%] md:max-w-[100%] weather_img_container'>
+      <img src={{weatherImage}} alt='weather image' />
+    </div>
+    <h4>{{weatherDescription}}</h4>
+  </div>
+
+  <div class='md:w-[35%]'>
+    <div class="icons_weather grid grid-cols-2 gap-8">
+      <div class="flex flex-col items-center humidity_container">
+        <!-- <MdOutlineWaves class='text-[2.5rem]'/> -->
+        <h6>{{weatherData?.main?.humidity}}%</h6>
+        <span>Humidity</span>
+      </div>
+
+      <div class="flex flex-col items-center humidity_container">
+        <!-- <PiWindFill class='text-[2.5rem]'/> -->
+        <h6>{{weatherData?.wind?.speed}}km/h</h6>
+        <span>Wind Speed</span>
+
+      </div>
+
+      <div class="flex flex-col items-center humidity_container">
+        <!-- <GiSpeedometer class\='text-[2.5rem]'/> -->
+        <h6>{{weatherData?.main?.pressure}}hPa</h6>
+        <span>Pressure</span>
+      </div>
+
+      <div class="flex flex-col items-center humidity_container">
+        <!-- <TbUvIndex class='text-[2.5rem]'/> -->
+        <h6>{{weatherData?.wind?.speed}}</h6>
+        <span>UV</span>
+      </div>
+    </div>
+  </div>
+</div>

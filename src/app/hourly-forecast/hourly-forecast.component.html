@@ -1,0 +1,16 @@
+<h4 class='mb-8'>Hourly Forecast:</h4>
+  <div class='grid md:grid-cols-5 grid-cols-1 gap-8 justify-between'>
+    <div class='flex md:flex-col gap-4 px-3 py-2 items-center rounded-3xl bg-gradient-to-b from-orange-400 to-orange-100'  *ngFor="let hour of hourlyWeather">
+      <span>{{hour.dt_txt.slice(11 , 16)}}</span>
+
+      <div class='w-[60%] md:max-w-[100%] md:w-[100%]'>
+        <img [src]="getWeatherImage(hour)" alt='weather image' />
+      </div>
+
+      <h6 class="ml-3">{{hour.main.temp_max}}'C</h6>
+      <div class='w-[30%] md:max-w-[55%] md:w-[55%]'>
+        <img src="../../assets/arrow.png" alt="img" />
+      </div>
+      <span>{{hour.wind.speed}}km/h</span>
+    </div>
+  </div>
